@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-char *trimString(const char *str) {
+char *trim(const char *str) {
   size_t len = strlen(str);
   size_t new_len = 1;
 
@@ -46,7 +46,7 @@ int main(void) {
     return 1;
   }
 
-  char *new_str = trimString(str);
+  char *new_str = trim(str);
   if (new_str) {
     printf("Trimed str: %s", new_str);
     free(new_str);
